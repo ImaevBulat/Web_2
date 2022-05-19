@@ -1,0 +1,72 @@
+body {
+    white-space: normal;
+}
+.items-wrapper {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1c1f21;
+}
+.item {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+}
+.item:hover {
+    background: rgba(155, 209, 251, 0.371);
+}
+.item-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.item-price {
+    font-size: 15px;
+    color: #799905;
+}
+.item-treb {
+font-size: 12px;
+color: #8f98a0;
+}
+#resume {
+    padding: 20px;
+    background: linear-gradient( to right, #2A475E 5%, #1B2838 70%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #1c1f21;;
+}
+.res-item {
+    margin: 10px 0;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    color: #b2c1ce;
+}
+.res-item input , .res-item select, .res-item textarea{
+  margin-left: 15px;
+  padding: 5px;
+background-color: #1B2838; color: #b2c1ce;
+ width: 100%; 
+}
+.res-item textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+.res-item:first-child {
+    margin-top: 0;
+}
+#slider-range-max {
+    width: 100%;
+}
+#close {
+    font-size: 12px;
+    color: #b2c1ceaf;
+    cursor: pointer;
+    margin: 0;
+}
+#close:hover {
+color:#fff;
+}
+.m15 {
+    margin: 15px auto;
+}

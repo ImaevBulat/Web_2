@@ -1,0 +1,119 @@
+.game-area {
+    margin-top: 10px;
+}
+.game {
+    background: #202d39;
+    height: 69px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    line-height: 18px;
+    color: #c7d5e0;
+    font-size: 1.25em;
+    line-height: 18px;
+    transition: all 0.25s;
+}
+.game__img {
+    height: 69px;
+    margin-right: 20px;
+}
+.game:hover {
+    cursor: pointer;
+    background: #9bd1fba6;
+    color:#263645;
+}
+.game__info {
+    display: flex;flex-direction: column;
+    justify-content: space-between;
+}
+.game__info-platform {
+    width: 20px;
+    height: 20px;
+    background: url(../img/wind.png);    opacity: 0.3;
+}
+.game__info-cats {
+    color: #384959;
+    font-size: 12px;
+}
+.game__price {
+    margin-left: auto;
+    margin-right: 20px;
+    color: #acdbf5;
+    transition: color .25s;
+    font-size: 14px;
+}
+.game:hover .game__price {
+    color: #263645;
+}
+.buttons {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mb15{margin-bottom: 15px;}
+.m15 {
+    margin: 15px 0;
+}
+.rev-form {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    color: #8f98a0;
+    font-weight: 300;
+    width: 100%;
+    background-color: #3D4450 ;
+    padding: 10px;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+}
+.form-item input,textarea {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #1B2838; color: #8f98a0;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.sendBtn {
+    cursor: pointer;
+    display: inline;color: #2B5066; background: linear-gradient( to bottom, rgba(193,228,249,1) 5%, rgba(148,183,202,1) 95%);
+    border-radius: 2px;
+    padding: 5px 20px;font-size: 16px;
+    align-self: flex-end;
+}
+.sendBtn:hover {
+    background: #66C0F4;
+    color: #fff;
+}
+.revs {
+    display: flex;
+}
+.rev {
+    width: 240px;
+    margin: 10px 5px;
+}
+.rev-name {
+    background-color: #23262E;
+    padding: 5px;
+    color:#819db8;
+}
+.rev-text {
+    padding: 10px;background: linear-gradient( to right, #2A475E 5%, #1B2838 70%);
+}
+.rev-text .text {
+    width: 100%;
+    padding: 0 7px;
+    font-size: 12px;white-space:normal;
+    color: #9fb4c9;
+}
+.rev-date {
+    padding: 0 7px;
+    color: #8f98a0;
+    font-size: 12px;
+}

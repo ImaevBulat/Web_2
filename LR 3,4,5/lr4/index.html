@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam</title>
+    <link rel="stylesheet" href="../gen_style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
+                <a href="/lr4/"> <img src="../logo.svg" alt="logo" class="logo-img"></a>
+            </div>
+            </a>
+            <ul class="links">
+                <a href="../">
+                    <li>Главная</li>
+                </a>
+                <a href="../lr3/">
+                    <li>Лабораторная №3</li>
+                </a>
+                <a href="../lr4/">
+                    <li>Лабораторная №4</li>
+                </a>
+                <a href="../lr5">
+                    <li>Лабораторная №5</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container m15">
+            <div class="title">Вакансии в компании steam</div>
+
+            <div class="items-wrapper">
+                <div class="item" data-name='Разработчик Middle JS'>
+                    <div class="item-name">Разработчик Middle JS</div>
+                    <div class="item-price">105 000 руб./мес.</div>
+                    <div class="item-treb">Требования: ViewJS, Node.JS, TypeScript</div>
+                </div>
+                <div class="item" data-name='Разработчик Senior PHP'>
+                    <div class="item-name">Разработчик Senior PHP</div>
+                    <div class="item-price">185 000 руб./мес.</div>
+                    <div class="item-treb">Требования: Laravel, Symfony, PHP 8.1.4</div>
+                </div>
+                <div class="item" data-name='Web-дизайнер'>
+                    <div class="item-name">Web-дизайнер</div>
+                    <div class="item-price">145 000 руб./мес.</div>
+                    <div class="item-treb">Требования: Figma, Photoshop CS6</div>
+                </div>
+                <div class="item" data-name='Уборщик'>
+                    <div class="item-name">Уборщик</div>
+                    <div class="item-price">35 000 руб./мес.</div>
+                    <div class="item-treb">Требования: метла, швабра, тряпка</div>
+                </div>
+            </div>
+            <div class="title m15">Наши условия</div>
+
+            <div id="accordion">
+                <h2>Удобный график</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore unde non maxime est suscipit quasi
+                    quos
+                    earum id ad voluptatibus voluptatem consectetur nesciunt sit laboriosam nulla, in soluta atque et.
+                </p>
+                <h2>Хорошая команда</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eveniet accusantium temporibus nisi
+                    accusamus nostrum tenetur commodi, quo natus. Architecto facilis quo asperiores. Doloribus optio
+                    repellendus minus quasi, provident quidem?</p>
+                <h3>Высокие зарплаты</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat totam laboriosam similique unde
+                    mollitia sequi odio aliquid eos, in cum rem ipsum. Dignissimos at perferendis similique eum quidem
+                    illo
+                    inventore.</p>
+            </div>
+
+        </div>
+
+
+
+        <div id="resume" title="Отправить заявку">
+            <div class="res-item">
+                <div class="title" id="vac">Разработчик Middle JS</div>
+            </div>
+            <div class="res-item">
+                <label>ФИО</label>
+                <input type="text" name="name">
+            </div>
+            <div class="res-item">
+                <label>Дата рождения</label>
+                <input type="text" id="date" placeholder="01.01.2022">
+            </div>
+            <div class="res-item">
+                <label>Место жительства:</label>
+                <select name="city" id="city">
+                    <option value="Уфа">Уфа</option>
+                    <option value="Стерлитамак">Стерлитамак</option>
+                    <option value="Салават">Салават</option>
+                    <option value="Нефтекамск">Нефтекамск</option>
+                    <option value="Октябрьский">Октябрьский</option>
+                </select>
+            </div>
+            <div class="res-item">
+                <label>Адрес:</label>
+                <input type="text" id="address" placeholder="ул. Карла Маркса">
+            </div>
+            <div class="res-item wrap">
+                <label>Стаж:</label>
+                <input type="text" name="staj" id="staj">
+                <div id="slider-range-max"></div>
+            </div>
+            <div class="res-item">
+                <label>О себе: <span id="tooltip" title="Не более 1000 символов">(?)</span></label><br>
+                <textarea name="about" id="about"></textarea>
+            </div>
+            <div class="res-item"><button class="btn" id="sendRes">Отправить</button></div>
+            <div class="res-item" id="close">Закрыть форму</div>
+        </div>
+
+    </main>
+
+    <div id="alert" title="Успешно">Ваша зявка успешно отправлена!</div>
+    <div id="confirme" title="Подтвердите действие">Соглашаясь, вы принимаете политику конфиденциальности</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="imgs">
+                <img src="../valve.png" alt="">
+                <img src="../steam.png" alt="">
+            </div>
+            <div class="footer-text">
+                © 2022 Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих
+                владельцев в США и других странах.<br>
+                НДС включён во все цены, где он применим. Политика конфиденциальности | Правовая информация | Соглашение
+                подписчика Steam | Возвраты | Файлы cookie
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>
