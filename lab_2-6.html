@@ -1,0 +1,88 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+$(window).scroll(function() {
+if($(this).scrollTop() != 0) {
+$('#toTop').fadeIn();
+} else { 
+$('#toTop').fadeOut();
+}
+});
+$('#toTop').click(function() {
+$('body,html').animate({scrollTop:0},800);
+});
+}); 
+</script>
+    <head>
+        <meta charset="utf-8">
+        <title>Задание 6, Имаев Булат</title>
+		<style>
+   .b1 {
+background:#2F4F4F;  
+color: white; 
+font-size: 13pt; 
+   }
+   .b2 {
+    background:#2F4F4F;  
+    color: white; 
+    font-size: 13pt; 
+	}
+	.b3 {
+    background:#2F4F4F;  
+    color: white; 
+    font-size: 13pt; 
+	}
+	.b4 {
+    background:#006400;  
+    color: white;
+    font-size: 13pt; 
+	}
+  </style>
+    </head>
+    <body bgcolor="#FFF0F5" background="https://thumbs.dreamstime.com/b/%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9-%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82%D0%B0-%D0%B2-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D1%85-%D0%BC%D0%B0%D1%81%D0%BA%D0%B0%D1%85-%D0%BA%D0%B0%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%BD-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8-177676897.jpg">
+    <body>
+	<h2>Сколько вам лет?</h2>
+	<h3>Выберите вариант ответа:</h3>
+        <form>
+		<button class="b1" id="1">от 15 до 18 </button>
+        <label id="l1"></label>
+        <output id="p1" type="text" name="1" ></output><br>
+        <br><button class="b2" id="2">от 19 до 21</button>
+        <label id="l2"></label>
+        <output id="p2" type="text" name="2" readonly></output><br>
+        <br><button class="b3" id="3">от 21 до 24</button>
+        <label id="l3"></label>
+        <output id="p3" type="text" name="3" readonly></output><br>
+        </form>
+	<br><button class="b4" id="button"> Показать процентное соотношения</button>
+    <script type="text/javascript">
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var sum = 0;
+        $(document).ready(function(){
+            $("#button").click(function(){
+                document.getElementById("p1").value = " В процентах: "+(a/sum)*100+"%";
+                document.getElementById("p2").value = " В процентах: "+(b/sum)*100+"%";
+                document.getElementById("p3").value = " В процентах: "+(c/sum)*100+"%";
+            });
+            $("#1").click(function(){
+                a +=1;
+                sum +=1;
+                $("#l1").text("Количество проголосовавших: "+a);
+                return false; });
+            $("#2").click(function(){
+                b +=1;
+                sum +=1;
+                $("#l2").text("Количество проголосовавших: "+b);
+                return false; });
+            $("#3").click(function(){
+                c +=1;
+                sum +=1;
+                $("#l3").text("Количество проголосовавших:  "+c);
+                return false; });
+        });
+    </script>
+    </body>
+</html>

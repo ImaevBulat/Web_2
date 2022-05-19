@@ -1,0 +1,101 @@
+
+   
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>Задание 2, Имаев Булат</title>
+ <style>
+   .b1 {
+    background:#800080;  
+    color: white; 
+    font-size: 11pt; 
+   }
+   .b2 {
+    background:#800080;  
+    color: white; 
+    font-size: 11pt; 
+	}
+  </style>
+</head>
+<body bgcolor="#FFA07A">
+    <body>
+    <h2> Форма заполнения данных </h2>
+    <form name="user">
+        Имя * <input type="text" name="name" size="20"><br> 
+        Пароль * <input type="text" name="pass" size="20"><br>
+        Подтверждение пароля * <input type="text" name="pass1" size="20"><br> 
+        Email * <input type="text" name="e" size="30"><br>
+        Тема сообщения <input type="text" name="tema" size="30"><br>
+        Сообщение  <input type="textarea" name="text" size="80"><br>
+        <font size=4>* - обязательны для заполнения</font><br><br>
+        <input type="button" class="b1" value="Отправить" onClick="doSend()">
+        <input type="reset" class="b2" value="Очистить">
+      </form>
+  </body>
+    <script language="JavaScript"> 
+        
+        function doSend(){
+            var pas=document.user.e.value.indexOf("@",1);
+            if(document.user.name.value==""){
+                alert('Введите ваше имя!');
+                document.user.name.style.borderColor="#FF0000";
+            }
+            else if(document.user.pass.value==""){
+                document.user.name.style.borderColor="#000000";
+                alert('Введите пароль!');
+                document.user.pass.style.borderColor="#FF0000";
+            }
+            else if(document.user.pass.value.length<4){
+                document.user.name.style.borderColor="#000000";
+                alert('Пароль должен быть больше 4 символов');
+                document.user.pass.style.borderColor="#FF0000";
+            }
+            else if(document.user.pass1.value==""){
+                document.user.name.style.borderColor="#000000";
+                document.user.pass.style.borderColor="#000000";
+                alert('Подтвердите ваш пароль!');
+                document.user.pass1.style.borderColor="#FF0000"
+            }
+            else if(document.user.pass1.value!=document.user.pass.value){
+                document.user.name.style.borderColor="#000000";
+                alert('Пароли должны совпадать!');
+                document.user.pass.style.borderColor="#FF0000";
+                document.user.pass1.style.borderColor="#FF0000";
+            }
+            else if(document.user.e.value==""){
+                document.user.name.style.borderColor="#000000";
+                document.user.pass.style.borderColor="#000000";
+                document.user.pass1.style.borderColor="#000000";
+                alert('Введите ваш Email'); 
+                document.user.e.style.borderColor="#FF0000";
+            }
+            else if(pas==-1){
+                document.user.name.style.borderColor="#000000";
+                document.user.pass.style.borderColor="#000000";
+                document.user.pass1.style.borderColor="#000000";
+                alert('Поле Email должно содержать @');
+                document.user.e.style.borderColor="#FF0000";
+            }
+            else if(document.user.text.value==""){
+                document.user.name.style.borderColor="#000000";
+                document.user.pass.style.borderColor="#000000";
+                document.user.pass1.style.borderColor="#000000";
+                document.user.e.style.borderColor="#000000";
+                alert('Заполните поле Сообщение');
+                document.user.text.style.borderColor="#FF0000";
+            }
+            else if(document.user.text.value.length<10){
+                document.user.name.style.borderColor="#000000";
+                document.user.pass.style.borderColor="#000000";
+                document.user.pass1.style.borderColor="#000000";
+                document.user.e.style.borderColor="#000000";
+                alert('Сообщение должно быть больше 10 символов');
+                document.user.text.style.borderColor="#FF0000";
+            }
+            else{ 
+                document.user.submit();
+            }
+        }
+    </script>
+  </head>
+</html>
